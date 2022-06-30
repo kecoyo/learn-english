@@ -1,21 +1,19 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import reducers, { initialState } from './reducers';
+import reducers from './reducers';
 
 const STORE_KEY = '__store_data';
 
-let defaultState = initialState;
+let preloadedState = {};
+
 let storeData = window.sessionStorage.getItem(STORE_KEY);
 if (storeData) {
   storeData = JSON.parse(storeData);
-  defaultState = {
-    ...initialState,
-    ...storeData,
-  };
+  Object.assign(storeData, storeData);
 }
 
-const store = createStore(combineReducers(reducers), defaultState, applyMiddleware(thunk));
+const store = createStore(reducers, preloadedState, applyMiddleware(thunk));
 window.store = store;
 
 // 组件订阅 store，传递一个函数，只要 store 数据改变，这个函数就会被执行

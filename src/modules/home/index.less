@@ -1,0 +1,17 @@
+@class-prefix: ~'g-home';
+
+.@{class-prefix} {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &-content {
+    height: calc(100% - 56px);
+    flex: 1;
+    background-color: rgb(231, 235, 240);
+  }
+
+  audio {
+    display: none;
+  }
+}

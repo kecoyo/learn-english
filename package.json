@@ -4,7 +4,7 @@
   "description": "",
   "main": "''",
   "scripts": {
-    "start": "webpack server --port 3050",
+    "start": "webpack server --port 3060",
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "eslint src"
   },
@@ -18,12 +18,17 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@babel/polyfill": "^7.12.1",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.5",
     "antd": "^4.19.5",
     "antd-mobile": "^5.10.3",
     "axios": "^0.26.1",
     "classnames": "^2.3.1",
     "immer": "^9.0.12",
     "jeselvmo": "^2.0.5",
+    "ljmui2": "^1.0.3",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "query-string": "^7.1.1",
