@@ -33,10 +33,12 @@ class Home extends React.Component {
     this.audio.play();
   };
 
+  onSearch =
+
   render() {
     return (
       <div className={classPrefix}>
-        <AppNavBar />
+        <AppNavBar onSearch={} />
         <div className={`${classPrefix}-content`}>
           <SentenceList loadMore={this.loadMore} onPlaySound={this.onPlaySound} />
           <audio ref={(e) => (this.audio = e)} controls>

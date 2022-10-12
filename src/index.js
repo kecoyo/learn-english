@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './modules';
+import 'inobounce';
 
 /* 公共样式 */
 import './styles/index.less';
